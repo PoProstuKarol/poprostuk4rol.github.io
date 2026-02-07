@@ -278,3 +278,97 @@ nav {
   p { font-size: 1em; }
   button { font-size: 1em; padding: 8px 12px; }
 }
+/* --- Responsywne kontenery dla about.html --- */
+.about-container {
+  width: 100%;           /* zajmuje całą szerokość ekranu */
+  max-width: 800px;      /* ograniczenie dla desktopa */
+  margin: 0 auto;        /* centrowanie */
+  padding: 15px;         /* odstęp od krawędzi telefonu */
+  box-sizing: border-box;/* ważne! padding nie powiększa szerokości */
+}
+
+.about-container p {
+  word-wrap: break-word; /* tekst zawija się w box */
+  overflow-wrap: break-word;
+  line-height: 1.5em;    /* lepsza czytelność */
+}
+
+/* Dodatkowa media query dla małych ekranów */
+@media only screen and (max-width: 768px) {
+  .about-container {
+    padding: 10px;
+  }
+  .about-container p {
+    font-size: 1em; /* dopasowanie czcionki */
+  }
+}
+/* --- About layout i logo --- */
+.about-layout {
+  display: flex;
+  flex-direction: column;   /* pionowo: logo na górze, tekst na dole */
+  align-items: center;      /* centrowanie w poziomie */
+  justify-content: flex-start; /* logo na górze */
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;         /* ograniczenie szerokości dla desktopa */
+  margin: 20px auto;
+  box-sizing: border-box;
+}
+
+.about-image {
+  max-width: 150px;         /* rozmiar logo */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Kontener z tekstem */
+.about-container {
+  width: 100%;
+  text-align: center;       /* tekst wyśrodkowany */
+}
+
+.about-container p {
+  margin: 10px 0;
+  line-height: 1.5;
+  word-wrap: break-word;    /* tekst nie wychodzi poza box */
+}
+
+/* Sekcja zmiany osobowości */
+.personality-switch {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.personality-switch button {
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 1em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+/* --- Media Queries dla telefonów --- */
+@media only screen and (max-width: 768px) {
+  .about-layout {
+    padding: 15px;
+    max-width: 95%; /* dopasowanie do ekranu telefonu */
+  }
+  .about-image {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+  .about-container p {
+    font-size: 1em;
+  }
+  .personality-switch button {
+    padding: 6px 10px;
+    font-size: 0.9em;
+  }
+}
