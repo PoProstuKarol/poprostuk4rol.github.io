@@ -232,4 +232,49 @@ nav a.active {
     line-height: 1.6;
     margin-bottom: 16px;
 }
+/* --- Responsywność ogólna --- */
+img {
+  max-width: 100%;
+  height: auto;
+}
 
+.container, .content, .main {
+  width: 100%;
+  max-width: 1200px; /* ograniczenie dla desktopa */
+  margin: 0 auto;
+  padding: 0 15px; /* margines od krawędzi telefonu */
+}
+
+h1, h2, h3, p, button {
+  font-size: clamp(14px, 2vw, 24px); /* elastyczna czcionka */
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap; /* menu zawija się w węższych ekranach */
+}
+
+.sidebar {
+  width: 25%;
+}
+
+.main-content {
+  width: 75%;
+}
+
+/* Media Queries dla ekranów mniejszych niż 768px (telefony) */
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column; /* menu pionowo na telefonie */
+  }
+  .sidebar {
+    display: none; /* ukryj boczny panel */
+  }
+  .main-content {
+    width: 100%; /* zajmuje całą szerokość */
+  }
+  h1 { font-size: 1.5em; }
+  h2 { font-size: 1.2em; }
+  p { font-size: 1em; }
+  button { font-size: 1em; padding: 8px 12px; }
+}
