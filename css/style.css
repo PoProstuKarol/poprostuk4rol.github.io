@@ -372,3 +372,38 @@ footer {
     font-size: 0.9em;
   }
 }
+/* --- Nagłówek na telefonie --- */
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 10px 0; /* zmniejszony padding headera */
+  }
+
+  .nav {
+    flex-direction: column; /* menu pod logo */
+    gap: 10px;
+  }
+
+  nav a {
+    margin-left: 0;       /* usuń margines boczny */
+    margin-bottom: 5px;   /* odstęp między linkami */
+    font-size: 0.85em;
+  }
+
+  /* Odstęp dla sekcji, żeby nie była ucinana przez fixed header */
+  .section {
+    padding-top: 80px; /* dostosuj do wysokości headera na telefonie */
+  }
+
+  /* About layout i logo na telefonie */
+  .about-layout {
+    padding: 10px;
+    max-width: 95%;
+    align-items: center;       /* centrowanie w poziomie */
+    justify-content: flex-start;
+  }
+
+  .about-image {
+    max-width: 120px;
+    margin-bottom: 15px;
+  }
+}
