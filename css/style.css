@@ -171,14 +171,14 @@ nav a:hover {
     cursor:pointer;
     color:white;
 }
-
+/*
 footer {
     background:#0a0c10;
     padding:60px 0;
     text-align:center;
     color:#777;
 }
-
+*/
 @keyframes fadeUp {
     from {opacity:0; transform:translateY(30px);}
     to {opacity:1; transform:translateY(0);}
@@ -407,3 +407,57 @@ footer {
     margin-bottom: 15px;
   }
 }
+
+footer .container {
+    width: 100%;
+}
+
+.gallery-page footer {
+    padding: 30px 0;
+}
+/* Upewniamy się, że html i body mają 100% wysokości */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Kontener całej strony */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Główna zawartość strony */
+.main-content {
+  display: flex;
+  justify-content: center; /* poziome centrowanie */
+  align-items: center;     /* pionowe centrowanie, jeśli chcesz */
+  flex-direction: column;  /* w pionie */
+  min-height: calc(100vh - 160px); /* dostosuj do wysokości header+footer */
+}
+
+
+/* Stopka */
+footer {
+    background-color: #111; /* przykład koloru */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+.generator-container {
+  display: flex;                
+  flex-direction: column;       
+  justify-content: flex-start;   /* zamiast center, zaczynamy od góry */
+  align-items: center;          
+  min-height: calc(100vh - 100px); /* dostosuj do wysokości header+footer */
+  padding: 120px 20px 20px 20px;  /* górny padding = wysokość headera + odstęp */
+  box-sizing: border-box;
+}
+
+/* Card w generatorze */
+.generator-container .card {
+  max-width: 600px;  
+  width: 100%;       
+  text-align: center;
+}
+

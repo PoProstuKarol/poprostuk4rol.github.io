@@ -2,13 +2,15 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Galeria</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generator Książka</title>
+
 <link rel="stylesheet" href="css/style.css">
 <script defer src="js/main.js"></script>
 <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
-<body class="gallery-page">
+
+<body>
 
 <header>
   <div class="container nav">
@@ -19,31 +21,45 @@
       <a href="archive.html">Archiwum</a>
       <a href="gallery.html">Galeria</a>
       <a href="contact.html">Kontakt</a>
-       <a href="generator.html">Generator</a>
+      <a href="generator.html" class="active">Generator</a>
     </nav>
   </div>
 </header>
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
 <section class="section container">
-<h2>Galeria</h2>
+  <h2>Generator Książka</h2>
 
-<div class="gallery-grid">
-<img src="images/gallery1.jpg">
-<img src="images/gallery2.jpg">
-<img src="images/gallery3.jpg">
-<img src="images/gallery4.jpg">
-</div>
+  <div class="card" style="text-align:center; max-width:600px; margin:auto;">
+    
+    <p 
+      id="quote"
+      style="
+        min-height:80px;
+        font-size:1.1em;
+        line-height:1.5;
+        margin-bottom:30px;
+      "
+    >
+      Kliknij przycisk, aby wylosować zachowanie Książka.
+    </p>
 
+    <button onclick="nextQuote()">
+      Losuj Książka
+    </button>
+
+  </div>
 </section>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer>
   <div class="container">
     © 2026 KSIĄŻEK INSTITUTE<br>
     Instytut jest fikcyjny i nie prowadzi działalności komercyjnej.
   </div>
 </footer>
-
 
 </body>
 </html>
